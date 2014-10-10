@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SNAP! Chat</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+    <!-- Content -->
+    <div id="messages-container">
+      <i>Bienvenue sur le chat de SNAP! :)</i>
+    </div>
+    <div id="users-container"></div>
+    <div id="input-container">
+      <textarea id="message-input" placeholder="Tapez votre message ici puis faites 'Entrée'..."></textarea>
+    </div>
+
+    <!-- Templates -->
+
+    <script id="message-template" type="text/x-template">
+      <div class="message">({{time}}) <span style="color:{{senderColor}};">{{sender}}</span>: {{text}}</div>
+    </script>
+
+    <script id="link-template" type="text/x-template">
+      <a target="_blank" href="{{url}}">{{url}}</a>
+    </script>
+
+    <!-- Scripts -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="snap.js"></script>
+    <script src="chat.js"></script>
+
+  </body>
+</html>
